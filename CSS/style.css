@@ -1,0 +1,138 @@
+body {
+	/* REMOVES ANY WHITESPACE AROUND THE EDGE */
+	margin: 0;			
+	
+	/* 100% THE WIDTH OF THE PAGE */
+	width:100vw;		
+	
+	/* 100% THE HEIGHT OF THE PAGE */
+	height:100vh;		
+	
+	/* ALLOWS US TO USE THE FLEX BOX SYSTEM TO POSITION OUR CARD */
+	display:flex;			
+	
+	/* PUTS ALL THE ELEMENTS IN THE BODY IN A COLUMN */
+	flex-direction: column;
+	
+	/* PUTS THS CARD VERTICALLY IN THE CENTER */
+	align-items:center;
+	
+	/* PUTS THS CARD HORIZONTALLY IN THE CENTER */
+	justify-content:center; 
+	
+	/* ADDS A GRADIENT BACKGROUND */
+	background: linear-gradient(to top, #f7797d, #FBD786, #C6FFDD);
+	
+	background-image: url("/assets/img/background.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+
+
+#card {
+	
+	/* APPLIES THIS FONT TO ALL PARTS OF OUR CARD */
+	font-family: 'Charmonman', cursive;
+	
+	/* SETS THE ORIGIN TO POSITION THINGS RELATIVE TO */
+	position:relative;
+	
+	perspective: 3000px;
+	
+}
+
+section {
+	/* MAKES ALL PARTS OF THE CARD THIS WIDTH */
+	width: 560px;
+	
+	/* MAKES ALL PARTS OF THE CARD THIS HEIGHT */
+	height: 400px;
+	
+	/* ROUNDS THE CORNERS OF OUR CARD PARTS */
+	border-radius: 10px;
+	
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#cover {
+
+	/* COLORS THE BACKGROUND AND TEXT */
+	background-color: #0f2342;
+	color: #ffffff;
+
+	/* CENTERS TEXT IN MIDDLE */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	/* POSITIONS OUR ELEMENT TO BE AT THE TOP LEFT CORNER OF OUR CARD */
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	
+}
+
+#cover.animate {
+	/* TELLS THE BROWSER TO OPEN THE CARD AROUND THE X AXIS */
+	transform: rotateX(180deg);
+	
+	/* TELLS THE BROWSER TO OPEN THE CARD FROM THE TOP */
+	transform-origin: 0% 0%;
+	
+	/* TELLS THE BROWSER TO TAKE 2 SECONDS to OPEN THE CARD */
+	transition: transform 2s;
+}
+
+#cover.animate > * {
+	/* TELLS THE BROWSER TO MAKE ALL THE CONTENTS OF THE COVER HIDDEN */
+	opacity: 0;
+	
+	/* TELLS THE BROWSER TO TAKE 1 SECOND TO HIDE THE CONTENTS */
+	transition: opacity 1s;
+}
+
+#cover:not(.animate):hover {
+	transform: rotateX(15deg);
+	transform-origin: 0% 0%;
+	transition: transform 0.5s;
+	cursor:grab;
+}
+
+#cover img {
+	height: 50%
+}
+
+#cover h1 {
+	font-size:32px;
+	margin:0px;
+}
+
+#cover h2 {
+	font-size:18px;
+	margin:0px;
+}
+
+#message {
+
+	/* COLORS THE BACKGROUND AND TEXT */
+	background-color: rgba(255,255,255,0.5);
+	color: #e43397;
+
+	/* CENTERS TEXT IN MIDDLE */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	backdrop-filter: blur(8px);
+}
+
+#message h1 {
+	margin: 0;
+}
+
+#message img {
+	height: 60%;
+}
