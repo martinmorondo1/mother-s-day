@@ -28,7 +28,6 @@ body {
 	background-position: center center;
 }
 
-
 #card {
 	
 	/* APPLIES THIS FONT TO ALL PARTS OF OUR CARD */
@@ -38,6 +37,7 @@ body {
 	position:relative;
 	
 	perspective: 3000px;
+
 	
 }
 
@@ -59,6 +59,8 @@ section {
 	/* COLORS THE BACKGROUND AND TEXT */
 	background-color: #0f2342;
 	color: #ffffff;
+	height: 44em;
+	
 
 	/* CENTERS TEXT IN MIDDLE */
 	display: flex;
@@ -101,16 +103,17 @@ section {
 }
 
 #cover img {
-	height: 50%
+	height: 50%;
 }
 
 #cover h1 {
-	font-size:32px;
+	font-size:36px;
 	margin:0px;
+	text-align: center;
 }
 
 #cover h2 {
-	font-size:18px;
+	font-size:26px;
 	margin:0px;
 }
 
@@ -118,21 +121,51 @@ section {
 
 	/* COLORS THE BACKGROUND AND TEXT */
 	background-color: rgba(255,255,255,0.5);
-	color: #e43397;
+	color: #fc007a;
 
 	/* CENTERS TEXT IN MIDDLE */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	max-width: 90%;
+	height: 44em;
+	margin: 0 auto;
 	
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(150px);
+
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 600;
+	font-style: italic;
 }
 
 #message h1 {
-	margin: 0;
+	margin-right: 10px;
 }
 
-#message img {
-	height: 60%;
+#message p {
+	margin: 0;
+	font-size: 17.9px;
+}
+
+#message img, video {
+	height: 20em;
+	margin-bottom: 10px;
+	/* width: 50%; */
+}
+
+.imgs {
+	width: 100%; /* Establecer el ancho del contenedor de imágenes al 100% */
+	max-width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.imgs img{
+	max-width: calc(33% - 10px); /* Establecer el ancho máximo de las imágenes al 33% del contenedor, descontando el espacio entre ellas */
+	height: auto; /* Permitir que la altura se ajuste automáticamente */
 }
